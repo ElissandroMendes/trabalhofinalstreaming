@@ -50,8 +50,8 @@ class ProducerSensorData(threading.Thread):
 
     def initializePubNubConector(self):
         pnconfig = PNConfiguration()
-        pnconfig.subscribe_key = "sub-c-5f1b7c8e-fbee-11e3-aa40-02ee2ddab7fe"
-        pnconfig.publish_key = "pub-c-bfc693a9-68ce-402e-99b1-df9d7f06d1d4"
+        pnconfig.subscribe_key = "SUBSCRIBE_KEY"
+        pnconfig.publish_key = "PUBLISH_KEY"
         self.pubnub = PubNub(pnconfig)
         self.callback = SensorDataCallback()
         self.callback.sink = self.producer
